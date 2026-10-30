@@ -1,0 +1,129 @@
+body {
+  height: 100svh;
+  overflow: hidden;
+}
+/* --------------------------------------- Hero --------------------------------------- */
+.hero {
+  padding: 48px 160px;
+}
+.heading > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.heading h5 {
+  color: var(--primary);
+  white-space: nowrap;
+}
+.heading h1 {
+  white-space: nowrap;
+}
+.heading hr {
+  width: 320px;
+  height: 2px;
+  margin: 0;
+}
+.info {
+  max-width: 1000px;
+  font-weight: 400;
+}
+.actions {
+  margin-top: 36px;
+  display: flex;
+  gap: 24px;
+}
+
+/* --------------------------------------- Overwrites --------------------------------------- */
+.btn {
+  padding: 16px 24px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.btn a {
+  font-size: 22.62px;
+}
+
+/* --------------------------------------- Decorations --------------------------------------- */
+.scene {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  transform-origin: bottom right;
+  transform: scale(1);
+}
+.floor {
+  position: absolute;
+  width: 1920px;
+  bottom: -350px;
+  z-index: -2;
+  left: -300px;
+}
+.floor path {
+  fill: var(--card);
+}
+.table {
+  position: absolute;
+  width: 1000px;
+  right: -250px;
+  bottom: -150px;
+  z-index: 0;
+  filter:
+      drop-shadow(0px 50px 100px rgba(50, 50, 93, 0.25))
+      drop-shadow(0px 30px 60px rgba(0, 0, 0, 0.3));
+}
+.character-container {
+  position: absolute;
+  bottom: -50px;
+  right: 100px;
+}
+#capybara-body {
+    position: relative;
+    z-index: 2;
+    animation: breathing 3s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+#capybara-left {
+  position: absolute;
+  top: 270px;
+  left: 20px;
+  transform: rotate(-45deg);
+  z-index: 1;
+}
+#capybara-right {
+  position: absolute;
+  top: 300px;
+  right: 40px;
+  transform: rotate(-45deg);
+  z-index: 3;
+}
+
+
+@keyframes breathing {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+}
+
+/* --------------------------------------- Accessibility --------------------------------------- */
+
+:focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 4px;
+}
+
+/* Support smaller screens and browser zoom */
+@media (max-width: 1680px) {
+    .hero {
+        padding-inline: 5%;
+    }
+    .info {
+      max-width: 600px;
+    }
+    .heading hr {
+      width: 160px;
+    }
+}

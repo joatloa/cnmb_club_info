@@ -1,0 +1,18 @@
+.btn {
+    padding: 16px 24px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: var(--primary);
+}
+.primary-btn * {
+    color: var(--primary-foreground);
+}
+.card-btn {
+    background-color: var(--card);
+}
+.card-btn *{
+    color: var(--foreground);
+}

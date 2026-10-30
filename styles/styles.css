@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    color-scheme: light;
+
+    /* 1. Base */
+    --background: #F6F2ED;
+    --foreground: #100B10;
+
+    --card: #ECE3D8;
+    --muted: #E4D9CC;
+
+    /* 2. Brand */
+    --primary: #463432;
+    --primary-foreground: #F8F3ED;
+
+    --secondary: #DCC8B5;
+    --secondary-foreground: #382620;
+
+    /* 3. Semantic */
+    --success: #477A55;
+    --success-foreground: #FFFFFF;
+
+    --warning: #D49A42;
+    --warning-foreground: #24170A;
+
+    --danger: #BD5549;
+    --danger-foreground: #FFFFFF;
+
+    /* 4. UI */
+    --border: #D3C5B6;
+    --ring: #C98451;
+}
+
+.dark {
+    color-scheme: dark;
+
+    /* 1. Base */
+    --background: #171311;
+    --foreground: #F6F0E9;
+
+    --card: #29211D;
+    --muted: #382C26;
+
+    /* 2. Brand */
+    --primary: #C98451;
+    --primary-foreground: #21140F;
+
+    --secondary: #493831;
+    --secondary-foreground: #F0E5D9;
+
+    /* 3. Semantic */
+    --success: #78B486;
+    --success-foreground: #142319;
+
+    --warning: #E5B65F;
+    --warning-foreground: #291B0B;
+
+    --danger: #E17C70;
+    --danger-foreground: #2B1110;
+
+    /* 4. UI */
+    --border: #493A32;
+    --ring: #D99565;
+}
+/* --------------------------------------- Reset --------------------------------------- */
+* {
+    margin: 0;
+    border: 0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: var(--foreground);
+    font-family: "Poppins";
+}
+hr {
+    height:1px;
+    background: var(--primary);
+    border-radius: 16px;
+    width: 100%;
+}
+/* --------------------------------------- Base --------------------------------------- */
+body {
+    background: var(--background);
+}
+
+/* --------------------------------------- Typography --------------------------------------- */
+h1 {
+    font-size: 90.44px;
+}
+h2 {
+    font-size: 63.96px;
+}
+h3 {
+    font-size: 45.23px;
+}
+h4 {
+    font-size: 31.99px;
+}
+h5 {
+    font-size: 22.62px;
+}
+p,a,button {
+    font-size: 16px;
+}
+@media (max-width: 1680px) {
+   h1 {
+    font-size: 67.34px;
+    }
+    h2 {
+        font-size: 50.52px;
+    }
+    h3 {
+        font-size: 37.9px;
+    }
+    h4 {
+        font-size: 28.43px;
+    }
+    h5 {
+        font-size: 21.33px;
+    }
+    p,a,button {
+        font-size: 16px;
+    }
+}

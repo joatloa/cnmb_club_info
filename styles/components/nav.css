@@ -1,0 +1,26 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 160px;
+}
+
+.nav ul {
+    display: flex;
+    gap: 16px;
+}
+
+.nav ul li a {
+    padding: 8px 8px;
+    font-weight: 500;
+}
+
+.nav .logo {
+    width: 64px;
+}
+
+@media (max-width: 1680px) {
+    .nav {
+        padding: 40px 5% 40px 5%;
+    }
+}
