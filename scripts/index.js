@@ -5,13 +5,15 @@ const rightArm = document.querySelector("#capybara-right");
 const arms = [leftArm, rightArm];
 let nextArm = 0;
 
-window.addEventListener("keydown", (event) => {
-    if (event.repeat || event.ctrlKey || event.altKey || event.metaKey) {
-        return;
-    }
-
-    if (event.key.length !== 1 && event.key !== "Enter" && event.key !== "Backspace") {
-        return;
+function tapPaws(event) {
+    if (event.type === "keydown") {
+        if (event.repeat || event.ctrlKey || event.altKey || event.metaKey) {
+            return;
+        }
+        
+        if (event.key.length !== 1 && event.key !== "Enter" && event.key !== "Backspace") {
+            return;
+        }
     }
 
     const arm = arms[nextArm];
@@ -28,15 +30,17 @@ window.addEventListener("keydown", (event) => {
             easing: "ease-in-out"
         }
     );
-});
+}
+
+window.addEventListener("keydown", tapPaws);
+window.addEventListener("click", tapPaws)
 
 /* --------------------------------------- Iris --------------------------------------- */
 
 const iris = document.querySelector("#capybara-iris");
 const eye = document.querySelector("#capybara-eye");
 
-
-document.addEventListener("mousemove", (event) => {
+function moveIris(event) {
     const eyeRect = eye.getBoundingClientRect();
     const irisRect = iris.getBoundingClientRect();
 
@@ -55,4 +59,6 @@ document.addEventListener("mousemove", (event) => {
     const moveY = Math.sin(angle) * Math.min(4, maxY);
 
     iris.style.transform = `translate(${moveX}px, ${moveY}px)`;
-});
+}
+
+document.addEventListener("mousemove", moveIris);

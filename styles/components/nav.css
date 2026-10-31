@@ -21,6 +21,14 @@
 
 @media (max-width: 1680px) {
     .nav {
-        padding: 40px 5% 40px 5%;
+        padding-inline: 5%;
+    }
+}
+@media (max-width: 800px) { 
+    .nav {
+        .padding-block: 16px;
+    }
+    .nav .logo {
+        width: 48px;
     }
 }

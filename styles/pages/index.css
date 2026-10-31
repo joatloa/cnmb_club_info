@@ -1,10 +1,14 @@
-body {
+.wrapper {
   height: 100svh;
+  width: 100%;
   overflow: hidden;
+  position: relative;
 }
 /* --------------------------------------- Hero --------------------------------------- */
 .hero {
   padding: 48px 160px;
+  display: flex;
+  flex-direction: column;
 }
 .heading > div {
   display: flex;
@@ -27,6 +31,9 @@ body {
   max-width: 1000px;
   font-weight: 400;
 }
+.info.shorter {
+  display:none;
+}
 .actions {
   margin-top: 36px;
   display: flex;
@@ -46,7 +53,8 @@ body {
 /* --------------------------------------- Decorations --------------------------------------- */
 .scene {
   position: absolute;
-  inset: 0;
+  bottom:0;
+  right: 50px;
   z-index: -1;
 
   transform-origin: bottom right;
@@ -65,7 +73,7 @@ body {
 .table {
   position: absolute;
   width: 1000px;
-  right: -250px;
+  right: -300px;
   bottom: -150px;
   z-index: 0;
   filter:
@@ -75,7 +83,7 @@ body {
 .character-container {
   position: absolute;
   bottom: -50px;
-  right: 100px;
+  right: 50px;
 }
 #capybara-body {
     position: relative;
@@ -115,6 +123,7 @@ body {
     outline-offset: 4px;
 }
 
+
 /* Support smaller screens and browser zoom */
 @media (max-width: 1680px) {
     .hero {
@@ -125,5 +134,74 @@ body {
     }
     .heading hr {
       width: 160px;
+    }
+}
+
+@media (max-width: 1200px) {
+  .scene {
+    transform: scale(0.75);
+  }
+  .info {
+      max-width: 550px;
+    }
+}
+
+@media (max-width: 800px) {
+  .scene {
+    transform: scale(0.6);
+    inset:unset;
+    bottom: 0px;
+    right: 50%;
+  }
+  .hero {
+    align-items: center;
+    text-align: center;
+  }
+  .actions {
+    margin-top: 16px;
+  }
+  .heading h5 {
+    flex:1;
+  }
+  .heading hr {
+    display: none;
+  }
+  .table {
+      right: -520px;
+
+  }
+  .character-container {
+    right: -170px;
+  }
+}
+
+@media(max-width: 600px) {
+  .hero h5 {
+    font-size: 16px;
+  }
+  .hero h1 {
+   font-size: 39.06px; 
+  }
+  .info {
+    display: none;
+    max-width: 550px;
+  }
+  .info.shorter {
+    display:block;  
+  }
+}
+@media(max-width: 500px) {
+  .hero {
+    padding-block: 8px;
+  }
+  .hero h1 {
+    font-size: 31.25px; 
+  }
+}
+
+
+@media (max-height: 1000px) and (max-width: 800px) {
+    .scene {
+        bottom: -75px;
     }
 }
