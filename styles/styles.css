@@ -63,6 +63,10 @@
     --border: #493A32;
     --ring: #D99565;
 }
+
+.dark #logo {
+    filter: brightness(0) saturate(100%) invert(96%) sepia(8%) saturate(250%) hue-rotate(334deg) brightness(103%) contrast(96%);
+}
 /* --------------------------------------- Reset --------------------------------------- */
 * {
     margin: 0;
